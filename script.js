@@ -1,28 +1,33 @@
 const celebrities = {
     B: [
-        'Bruna Marquezine', 'Anitta', 'Bruno Mars', 'Beyoncé', 'Brad Pitt',
+        'Anitta', 'Bruna Marquezine', 'Bruno Mars', 'Beyoncé', 'Brad Pitt',
         'Bruce Willis', 'Britney Spears', 'Benício Del Toro', 'Bella Hadid', 'Bad Bunny',
-        'Breno Lopes', 'Broderick Crawford', 'Beth Carvalho', 'Britney Spears', 'Boris Johnson'
+        'Breno Lopes', 'Beth Carvalho', 'Backstreet Boys', 'Bon Jovi', 'Baiano',
+        'Beto Barbosa', 'Billie Eilish', 'Biel Barbosa', 'Bruno Gagliasso', 'Brandy'
     ],
     I: [
         'Iza', 'Ivete Sangalo', 'Ian McKellen', 'Idris Elba', 'Irene Kim',
         'Isabelle Drummond', 'Igor Jansen', 'Iker Casillas', 'Idina Menzel', 'Ice Cube',
-        'Ivana Trump', 'Ian Somerhalder', 'Irmão Luan', 'Irma Dorta', 'Irina Shayk'
+        'Ivana Trump', 'Ian Somerhalder', 'Irmã Dulce', 'Irina Shayk', 'Ironman',
+        'Isadora Duncan', 'Isabella Merced', 'Iggy Azalea', 'Iced Tea', 'Ian Astbury'
     ],
     N: [
         'Naomi Campbell', 'Neymar', 'Nicolas Cage', 'Novak Djokovic', 'Natti Natasha',
         'Naldo Benny', 'Natalie Portman', 'Nicolas Hoult', 'Neil Patrick Harris', 'Naya Rivera',
-        'Nego do Borel', 'Ney Matogrosso', 'Nadine Jansen', 'Nanda Costa', 'Nando Reis'
+        'Nego do Borel', 'Ney Matogrosso', 'Nadine Jansen', 'Nanda Costa', 'Nando Reis',
+        'Natalia Vodianova', 'Nelson Piquet', 'Nego Vilela', 'Neguinho da Beija-Flor', 'Noah Centineo'
     ],
     G: [
         'Gigi Hadid', 'Gisele Bündchen', 'George Clooney', 'Gloria Groove', 'Guillermo del Toro',
         'Gustavo Lima', 'Gal Gadot', 'Guilherme Vieira', 'Gwen Stefani', 'Giancarlo Stanton',
-        'Gabriel Pensador', 'Gil do Vigor', 'Gaby Amarantos', 'Graciele Lacerda', 'Gui Napolitano'
+        'Gabriel Pensador', 'Gil do Vigor', 'Gaby Amarantos', 'Graciele Lacerda', 'Gui Napolitano',
+        'Glória Menezes', 'Gonzaga', 'Guido Weiss', 'Guta Stresser', 'Giovanna Lancellotti'
     ],
     O: [
         'Oscar Isaac', 'Oprah Winfrey', 'Orlando Bloom', 'Olivia Wilde', 'Oliveira Santos',
-        'Octavia Spencer', 'Olivia Rodrigo', 'Owen Wilson', 'Orquídea', 'Ozzy Osbourne',
-        'Osi Umenyiora', 'Omar Sharif', 'Odete Roitman', 'Odilon Wagner', 'Otto'
+        'Octavia Spencer', 'Olivia Rodrigo', 'Owen Wilson', 'Oasis', 'Ozzy Osbourne',
+        'Osmar Santos', 'Odilon Wagner', 'Otto', 'Oberdan Cattani', 'Oscar Niemeyer',
+        'Odete Roitman', 'Orquídea', 'Omar Sharif', 'Occidente', 'Olívia Prestes'
     ]
 };
 
