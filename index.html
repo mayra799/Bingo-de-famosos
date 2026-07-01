@@ -3,27 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bingo de Famosos</title>
+    <title>BINGO DA NOVE</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <header>
-            <h1>🎬 Bingo de Famosos 🎤</h1>
-            <p>Marque as celebridades e complete as linhas!</p>
-        </header>
-
+        <h1>BINGO DA NOVE</h1>
+        
+        <div class="bingo-table">
+            <div class="header">
+                <div class="col-letter">B</div>
+                <div class="col-letter">I</div>
+                <div class="col-letter">N</div>
+                <div class="col-letter">G</div>
+                <div class="col-letter">O</div>
+            </div>
+            
+            <div id="bingoGrid" class="grid">
+                <!-- Células geradas pelo JavaScript -->
+            </div>
+        </div>
+        
         <div class="controls">
-            <button id="newCardBtn" class="btn btn-primary">Novo Cartão</button>
-            <button id="resetBtn" class="btn btn-secondary">Resetar Marcações</button>
-        </div>
-
-        <div id="bingoCard" class="bingo-card">
-            <!-- Cartão será gerado pelo JavaScript -->
-        </div>
-
-        <div class="info">
-            <p id="messageText">Clique nas celebridades para marcar!</p>
+            <button id="newCardBtn" class="btn">Novo Cartão</button>
+            <button id="resetBtn" class="btn">Limpar</button>
         </div>
     </div>
 
