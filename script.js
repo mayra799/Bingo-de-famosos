@@ -1,27 +1,45 @@
-const celebrities = [
-    // B Column (1-15)
-    ['Anitta', 'Bruna Marquezine', 'Beyoncé', 'Bruno Mars', 'Brad Pitt'],
-    // I Column (16-30)
-    ['Ivete Sangalo', 'Iza', 'Ian McKellen', 'Idris Elba', 'Irene Kim'],
-    // N Column (31-45) - Com FREE no meio
-    ['Neymar', 'Naomi Campbell', 'Nicolas Cage', 'Novak Djokovic', 'Natti Natasha'],
-    // G Column (46-60)
-    ['Gisele Bündchen', 'Gloria Groove', 'George Clooney', 'Gigi Hadid', 'Guillermo del Toro'],
-    // O Column (61-75)
-    ['Oprah Winfrey', 'Orlando Bloom', 'Oasis', 'Olivia Wilde', 'Oscar Isaac']
-];
+const celebrities = {
+    B: ['Brad Pitt', 'Bruna Marquezine', 'Beyoncé', 'Bruno Mars', 'Breno Lopes', 'Bruce Willis', 'Britney Spears', 'Benício Del Toro', 'Bella Hadid', 'Bad Bunny'],
+    I: ['Iza', 'Ivete Sangalo', 'Ian McKellen', 'Idris Elba', 'Irene Kim', 'Isabelle Drummond', 'Igor Jansen', 'Iker Casillas', 'Idina Menzel', 'Ice Cube'],
+    N: ['Naomi Campbell', 'Neymar', 'Nicolas Cage', 'Novak Djokovic', 'Natti Natasha', 'Naldo Benny', 'Natalie Portman', 'Neymar Jr', 'Nicolas Hoult', 'Neil Patrick Harris'],
+    G: ['Gigi Hadid', 'Gisele Bündchen', 'George Clooney', 'Gloria Groove', 'Guillermo del Toro', 'Gustavo Lima', 'Gal Gadot', 'Guilherme Vieira', 'Gwen Stefani', 'Giancarlo Stanton'],
+    O: ['Oscar Isaac', 'Oprah Winfrey', 'Orlando Bloom', 'Olivia Wilde', 'Oliveira Santos', 'Oasis', 'Octavia Spencer', ' OnClick', 'Olivia Rodrigo', 'Owen Wilson']
+};
 
 let currentCard = [];
 let marked = new Set();
+let usedCelebrities = {
+    B: new Set(),
+    I: new Set(),
+    N: new Set(),
+    G: new Set(),
+    O: new Set()
+};
+
+function getRandomCelebrity(column) {
+    const available = celebrities[column].filter(c => !usedCelebrities[column].has(c));
+    if (available.length === 0) {
+        usedCelebrities[column].clear();
+        return celebrities[column][Math.floor(Math.random() * celebrities[column].length)];
+    }
+    const celeb = available[Math.floor(Math.random() * available.length)];
+    usedCelebrities[column].add(celeb);
+    return celeb;
+}
 
 function generateCard() {
     currentCard = [];
     marked.clear();
+    usedCelebrities = { B: new Set(), I: new Set(), N: new Set(), G: new Set(), O: new Set() };
     
-    // Gera 5 celebridades - uma para cada coluna
-    for (let col = 0; col < 5; col++) {
-        const shuffled = [...celebrities[col]].sort(() => Math.random() - 0.5);
-        currentCard.push(shuffled[0]);
+    const columns = ['B', 'I', 'N', 'G', 'O'];
+    
+    // Gera 5 linhas
+    for (let row = 0; row < 5; row++) {
+        for (let col = 0; col < 5; col++) {
+            const celeb = getRandomCelebrity(columns[col]);
+            currentCard.push(celeb);
+        }
     }
     
     renderCard();
@@ -45,16 +63,7 @@ function renderCard() {
                 cell.classList.add('marked');
                 marked.add(index);
             } else {
-                // Pega celebridade da coluna correspondente
-                if (row === 0) {
-                    cell.textContent = currentCard[col];
-                } else if (row === 1) {
-                    cell.textContent = currentCard[col];
-                } else if (row === 3) {
-                    cell.textContent = currentCard[col];
-                } else if (row === 4) {
-                    cell.textContent = currentCard[col];
-                }
+                cell.textContent = currentCard[index];
                 
                 if (marked.has(index)) {
                     cell.classList.add('marked');
