@@ -6,7 +6,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #1a3a1a;
+    background-color: #f0f0f0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,32 +17,32 @@ body {
 .container {
     background: white;
     padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    max-width: 650px;
     width: 100%;
 }
 
 h1 {
     text-align: center;
-    color: #1db942;
+    color: #333;
     margin-bottom: 30px;
     font-size: 2.5em;
     font-weight: bold;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
 }
 
 .bingo-table {
     margin-bottom: 30px;
-    border: 3px solid #1db942;
+    border: 4px solid #4169e1;
 }
 
 .header {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    background-color: #1db942;
+    background-color: #4169e1;
     gap: 0;
-    border-bottom: 3px solid #1db942;
+    border-bottom: 4px solid #4169e1;
 }
 
 .col-letter {
@@ -50,8 +50,8 @@ h1 {
     text-align: center;
     color: white;
     font-weight: bold;
-    font-size: 1.8em;
-    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    font-size: 2em;
+    border-right: 2px solid rgba(255, 255, 255, 0.5);
 }
 
 .col-letter:last-child {
@@ -63,7 +63,7 @@ h1 {
     grid-template-columns: repeat(5, 1fr);
     gap: 0;
     background: white;
-    border: 3px solid #1db942;
+    border: 4px solid #4169e1;
 }
 
 .cell {
@@ -72,89 +72,107 @@ h1 {
     align-items: center;
     justify-content: center;
     text-align: center;
-    border: 2px solid #1db942;
-    padding: 10px;
+    border: 2px solid #4169e1;
+    padding: 12px;
     cursor: pointer;
     font-weight: bold;
-    font-size: 0.75em;
+    font-size: 0.7em;
     color: #333;
     transition: all 0.2s ease;
     background: white;
     word-wrap: break-word;
     overflow: hidden;
     line-height: 1.2;
+    min-height: 100px;
 }
 
 .cell:hover:not(.free) {
-    background-color: #e8f5e9;
-    transform: scale(1.05);
+    background-color: #e6f0ff;
+    box-shadow: inset 0 0 0 2px #4169e1;
 }
 
 .cell.marked {
-    background-color: #1db942;
+    background-color: #4169e1;
     color: white;
     font-weight: bold;
 }
 
 .cell.free {
-    background-color: #1db942;
+    background-color: #4169e1;
     color: white;
     font-weight: bold;
-    font-size: 1.2em;
+    font-size: 1.1em;
     cursor: default;
 }
 
 .controls {
     display: flex;
-    gap: 10px;
+    gap: 15px;
     justify-content: center;
     flex-wrap: wrap;
 }
 
 .btn {
-    padding: 12px 24px;
+    padding: 14px 32px;
     font-size: 1em;
     font-weight: bold;
     border: none;
-    border-radius: 8px;
-    background-color: #1db942;
+    border-radius: 5px;
+    background-color: #4169e1;
     color: white;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
 .btn:hover {
-    background-color: #1aa82e;
+    background-color: #315ac1;
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(29, 185, 66, 0.3);
+    box-shadow: 0 4px 12px rgba(65, 105, 225, 0.3);
 }
 
 .btn:active {
     transform: translateY(0);
 }
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
     .container {
         padding: 20px;
     }
 
     h1 {
-        font-size: 2em;
+        font-size: 1.8em;
         margin-bottom: 20px;
     }
 
     .cell {
-        font-size: 0.65em;
-        padding: 5px;
+        font-size: 0.6em;
+        padding: 8px;
+        min-height: 80px;
     }
 
     .col-letter {
         padding: 10px;
-        font-size: 1.3em;
+        font-size: 1.5em;
     }
 
     .btn {
-        padding: 10px 16px;
+        padding: 12px 24px;
         font-size: 0.9em;
+    }
+
+    .header {
+        border-bottom: 3px solid #4169e1;
+    }
+
+    .bingo-table {
+        border: 3px solid #4169e1;
+    }
+
+    .grid {
+        border: 3px solid #4169e1;
+    }
+
+    .cell {
+        border: 1px solid #4169e1;
     }
 }
