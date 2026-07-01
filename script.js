@@ -1,9 +1,29 @@
 const celebrities = {
-    B: ['Brad Pitt', 'Bruna Marquezine', 'Beyoncé', 'Bruno Mars', 'Breno Lopes', 'Bruce Willis', 'Britney Spears', 'Benício Del Toro', 'Bella Hadid', 'Bad Bunny'],
-    I: ['Iza', 'Ivete Sangalo', 'Ian McKellen', 'Idris Elba', 'Irene Kim', 'Isabelle Drummond', 'Igor Jansen', 'Iker Casillas', 'Idina Menzel', 'Ice Cube'],
-    N: ['Naomi Campbell', 'Neymar', 'Nicolas Cage', 'Novak Djokovic', 'Natti Natasha', 'Naldo Benny', 'Natalie Portman', 'Neymar Jr', 'Nicolas Hoult', 'Neil Patrick Harris'],
-    G: ['Gigi Hadid', 'Gisele Bündchen', 'George Clooney', 'Gloria Groove', 'Guillermo del Toro', 'Gustavo Lima', 'Gal Gadot', 'Guilherme Vieira', 'Gwen Stefani', 'Giancarlo Stanton'],
-    O: ['Oscar Isaac', 'Oprah Winfrey', 'Orlando Bloom', 'Olivia Wilde', 'Oliveira Santos', 'Oasis', 'Octavia Spencer', ' OnClick', 'Olivia Rodrigo', 'Owen Wilson']
+    B: [
+        'Bruna Marquezine', 'Anitta', 'Bruno Mars', 'Beyoncé', 'Brad Pitt',
+        'Bruce Willis', 'Britney Spears', 'Benício Del Toro', 'Bella Hadid', 'Bad Bunny',
+        'Breno Lopes', 'Broderick Crawford', 'Beth Carvalho', 'Britney Spears', 'Boris Johnson'
+    ],
+    I: [
+        'Iza', 'Ivete Sangalo', 'Ian McKellen', 'Idris Elba', 'Irene Kim',
+        'Isabelle Drummond', 'Igor Jansen', 'Iker Casillas', 'Idina Menzel', 'Ice Cube',
+        'Ivana Trump', 'Ian Somerhalder', 'Irmão Luan', 'Irma Dorta', 'Irina Shayk'
+    ],
+    N: [
+        'Naomi Campbell', 'Neymar', 'Nicolas Cage', 'Novak Djokovic', 'Natti Natasha',
+        'Naldo Benny', 'Natalie Portman', 'Nicolas Hoult', 'Neil Patrick Harris', 'Naya Rivera',
+        'Nego do Borel', 'Ney Matogrosso', 'Nadine Jansen', 'Nanda Costa', 'Nando Reis'
+    ],
+    G: [
+        'Gigi Hadid', 'Gisele Bündchen', 'George Clooney', 'Gloria Groove', 'Guillermo del Toro',
+        'Gustavo Lima', 'Gal Gadot', 'Guilherme Vieira', 'Gwen Stefani', 'Giancarlo Stanton',
+        'Gabriel Pensador', 'Gil do Vigor', 'Gaby Amarantos', 'Graciele Lacerda', 'Gui Napolitano'
+    ],
+    O: [
+        'Oscar Isaac', 'Oprah Winfrey', 'Orlando Bloom', 'Olivia Wilde', 'Oliveira Santos',
+        'Octavia Spencer', 'Olivia Rodrigo', 'Owen Wilson', 'Orquídea', 'Ozzy Osbourne',
+        'Osi Umenyiora', 'Omar Sharif', 'Odete Roitman', 'Odilon Wagner', 'Otto'
+    ]
 };
 
 let currentCard = [];
