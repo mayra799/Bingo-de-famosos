@@ -1,33 +1,33 @@
 const celebrities = {
     B: [
-        'Anitta', 'Bruna Marquezine', 'Bruno Mars', 'Beyoncé', 'Brad Pitt',
-        'Bruce Willis', 'Britney Spears', 'Benício Del Toro', 'Bella Hadid', 'Bad Bunny',
-        'Breno Lopes', 'Beth Carvalho', 'Backstreet Boys', 'Bon Jovi', 'Baiano',
-        'Beto Barbosa', 'Billie Eilish', 'Biel Barbosa', 'Bruno Gagliasso', 'Brandy'
+        'Anitta 🎤', 'Bruna Marquezine 🎭', 'Belo 🎤', 'Bruno Gagliasso 🎭', 'Bebeto ⚽',
+        'Beth Carvalho 🎤', 'Babu Santana 🎭', 'Bruna Linzmeyer 🎭', 'Bruno Henrique ⚽', 'Barões da Pisadinha 🎤',
+        'Beto Barbosa 🎤', 'Bianca Comparato 🎭', 'Breno Lopes ⚽', 'Bárbara Paz 🎭', 'Baco Exu do Blues 🎤',
+        'Bussunda 🎭', 'Bárbara Reis 🎭', 'Bernard ⚽', 'Buchecha 🎤', 'Bárbara Evans 🎭'
     ],
     I: [
-        'Iza', 'Ivete Sangalo', 'Ian McKellen', 'Idris Elba', 'Irene Kim',
-        'Isabelle Drummond', 'Igor Jansen', 'Iker Casillas', 'Idina Menzel', 'Ice Cube',
-        'Ivana Trump', 'Ian Somerhalder', 'Irmã Dulce', 'Irina Shayk', 'Ironman',
-        'Isadora Duncan', 'Isabella Merced', 'Iggy Azalea', 'Iced Tea', 'Ian Astbury'
+        'Iza 🎤', 'Ivete Sangalo 🎤', 'Isabelle Drummond 🎭', 'Igor Jansen 🎭', 'Isis Valverde 🎭',
+        'Ingrid Guimarães 🎭', 'Isabel Teixeira 🎭', 'Igor Coronado ⚽', 'Irandhir Santos 🎭', 'Igor Rickli 🎭',
+        'Inácio ⚽', 'Ilva Niño 🎭', 'Isadora Ribeiro 🎭', 'Ithamar Roque ⚽', 'Isadora Pompeo 🎤',
+        'Ivan Lins 🎤', 'Igor Kannário 🎤', 'Isabel Fillardis 🎭', 'Inezita Barroso 🎤', 'Ionaldo ⚽'
     ],
     N: [
-        'Naomi Campbell', 'Neymar', 'Nicolas Cage', 'Novak Djokovic', 'Natti Natasha',
-        'Naldo Benny', 'Natalie Portman', 'Nicolas Hoult', 'Neil Patrick Harris', 'Naya Rivera',
-        'Nego do Borel', 'Ney Matogrosso', 'Nadine Jansen', 'Nanda Costa', 'Nando Reis',
-        'Natalia Vodianova', 'Nelson Piquet', 'Nego Vilela', 'Neguinho da Beija-Flor', 'Noah Centineo'
+        'Neymar ⚽', 'Naldo Benny 🎤', 'Ney Matogrosso 🎤', 'Nanda Costa 🎭', 'Nando Reis 🎤',
+        'Nicolas Prattes 🎭', 'Neto ⚽', 'Nívea Maria 🎭', 'Nathalia Dill 🎭', 'Nego do Borel 🎤',
+        'Nattan 🎤', 'Niltinho ⚽', 'Nívea Stelmann 🎭', 'Negra Li 🎤', 'Naldo ⚽',
+        'Neguinho da Beija-Flor 🎤', 'Nuno Leal Maia 🎭', 'Nelson Xavier 🎭', 'Nivaldo ⚽', 'Nando Rodrigues 🎭'
     ],
     G: [
-        'Gigi Hadid', 'Gisele Bündchen', 'George Clooney', 'Gloria Groove', 'Guillermo del Toro',
-        'Gustavo Lima', 'Gal Gadot', 'Guilherme Vieira', 'Gwen Stefani', 'Giancarlo Stanton',
-        'Gabriel Pensador', 'Gil do Vigor', 'Gaby Amarantos', 'Graciele Lacerda', 'Gui Napolitano',
-        'Glória Menezes', 'Gonzaga', 'Guido Weiss', 'Guta Stresser', 'Giovanna Lancellotti'
+        'Gustavo Lima 🎤', 'Gaby Amarantos 🎤', 'Glória Menezes 🎭', 'Guta Stresser 🎭', 'Giovanna Lancellotti 🎭',
+        'Gabriel Barbosa ⚽', 'Ganso ⚽', 'Giovanna Antonelli 🎭', 'Gaby Estrella 🎭', 'Gabriel Pensador 🎤',
+        'Gilberto Gil 🎤', 'Gerson ⚽', 'Grazi Massafera 🎭', 'Gustavo Mioto 🎤', 'Guilherme Fontes 🎭',
+        'Gal Costa 🎤', 'Guga ⚽', 'Guilherme Winter 🎭', 'Guilherme Arana ⚽', 'Geraldo Azevedo 🎤'
     ],
     O: [
-        'Oscar Isaac', 'Oprah Winfrey', 'Orlando Bloom', 'Olivia Wilde', 'Oliveira Santos',
-        'Octavia Spencer', 'Olivia Rodrigo', 'Owen Wilson', 'Oasis', 'Ozzy Osbourne',
-        'Osmar Santos', 'Odilon Wagner', 'Otto', 'Oberdan Cattani', 'Oscar Niemeyer',
-        'Odete Roitman', 'Orquídea', 'Omar Sharif', 'Occidente', 'Olívia Prestes'
+        'Oliveira Santos ⚽', 'Odilon Wagner 🎭', 'Otto 🎤', 'Oberdan Cattani ⚽', 'Osmar Prado 🎭',
+        'Otávio Müller 🎭', 'Orlando Silva 🎤', 'Othon Bastos 🎭', 'Oswaldo Montenegro 🎤', 'Oscar ⚽',
+        'Othon ⚽', 'Otávio Augusto 🎭', 'Olinho ⚽', 'Orlando Morais 🎤', 'Oswaldo ⚽',
+        'Orival Pessini 🎭', 'Olayr ⚽', 'Odaír José 🎤', 'Osmar Santos 🎤', 'Orestes ⚽'
     ]
 };
 
@@ -83,7 +83,48 @@ function renderCard() {
             
             // Célula FREE no centro (linha 2, coluna 2)
             if (row === 2 && col === 2) {
-                cell.textContent = 'FREE';
+                cell.textContent = 'FREE 🌟';
+                cell.classList.add('free');
+                cell.classList.add('marked');
+                marked.add(index);
+            } else {
+                cell.textContent = currentCard[index];
+                
+                if (marked.has(index)) {
+                    cell.classList.add('marked');
+                }
+                cell.onclick = () => toggleCell(index);
+            }
+            
+            grid.appendChild(cell);
+        }
+    }
+}
+
+function toggleCell(index) {
+    // Não permite clicar no FREE
+    if (index === 12) return;
+    
+    if (marked.has(index)) {
+        marked.delete(index);
+    } else {
+        marked.add(index);
+    }
+    renderCard();
+}
+
+function resetCard() {
+    marked.clear();
+    marked.add(12); // Sempre marca o FREE
+    renderCard();
+}
+
+document.getElementById('newCardBtn').addEventListener('click', generateCard);
+document.getElementById('resetBtn').addEventListener('click', resetCard);
+
+// Gera o primeiro cartão ao carregar
+generateCard();
+                cell.textContent = 'FREE 🌟';
                 cell.classList.add('free');
                 cell.classList.add('marked');
                 marked.add(index);
