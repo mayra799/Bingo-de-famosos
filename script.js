@@ -124,3 +124,23 @@ document.getElementById('resetBtn').addEventListener('click', resetCard);
 
 // Gera o primeiro cartão ao carregar
 generateCard();
+// Função para soltar confetes na tela inteira
+function celebrarBingo() {
+    confetti({
+        particleCount: 150,
+        spread: 80,
+        origin: { y: 0.6 }
+    });
+    
+    setTimeout(() => {
+        confetti({
+            particleCount: 100,
+            spread: 100,
+            origin: { y: 0.6 }
+        });
+    }, 300);
+}
+
+// Ativa o botão de Gritar Bingo
+document.getElementById('bingoBtn').addEventListener('click', celebrarBingo);
+
