@@ -166,6 +166,138 @@ function celebrarBingo() {
 }
 
 document.getElementById('bingoBtn').addEventListener('click', celebrarBingo);
+    const selectedNumbers = { B: [], I: [], N: [], G: [], O: [] };
+    
+    columns.forEach((col, colIdx) => {
+        let list = [...bingoNumbers[col]];
+        let seed = hashString(seedBase + col);
+        
+        // Embaralha a lista de forma previsível usando a seed
+        for (let i = list.length - 1; i > 0; i--) {
+            const r = seededRandom(seed);
+            seed += i;
+            const j = Math.floor(r * (i + 1));
+            [list[i], list[j]] = [list[j], list[i]];
+        }
+        selectedNumbers[col] = list.slice(0, 5);
+    });
+    
+    // Monta a cartela linha por linha
+    for (let row = 0; row < 5; row++) {
+        for (let col = 0; col < 5; col++) {
+            const num = selectedNumbers[columns[col]][row];
+            currentCard.push(num);
+        }
+    }
+    
+    saveGameState();
+    renderCard();
+}
+
+// Transforma texto em número para a seed
+function hashString(str) {
+    let hash = 0;
+    for (let i = 0; i < str.length; i++) {
+        hash = str.charCodeAt(i) + ((hash << 5) - hash);
+    }
+    return Math.abs(hash);
+}
+
+function renderCard() {
+    const grid = document.getElementById('bingGrid') || document.getElementById('bingoGrid');
+    if (!grid) return;
+    grid.innerHTML = '';
+    
+    for (let row = 0; row < 5; row++) {
+        for (let col = 0; col < 5; col++) {
+            const index = row * 5 + col;
+            const cell = document.createElement('div');
+            cell.className = 'cell';
+            
+            if (row === 2 && col === 2) {
+                cell.textContent = 'FREE 🌟';
+                cell.classList.add('free');
+                cell.classList.add('marked');
+            } else {
+                cell.textContent = currentCard[index];
+                if (marked.has(index)) {
+                    cell.classList.add('marked');
+                }
+                cell.onclick = () => toggleCell(index);
+            }
+            grid.appendChild(cell);
+        }
+    }
+}
+
+function toggleCell(index) {
+    if (index === 12) return;
+    
+    if (marked.has(index)) {
+        marked.delete(index);
+    } else {
+        marked.add(index);
+    }
+    saveGameState();
+    renderCard();
+}
+
+function resetCard() {
+    marked.clear();
+    marked.add(12);
+    saveGameState();
+    renderCard();
+}
+
+// Salva o estado atual no navegador da pessoa
+function saveGameState() {
+    const seed = getGameSeed();
+    const state = {
+        currentCard: currentCard,
+        marked: Array.from(marked)
+    };
+    localStorage.setItem(`bingo_state_${seed}`, JSON.stringify(state));
+}
+
+// Carrega o estado antigo se existir, evitando resetar ao sair da página
+function loadGameState() {
+    const seed = getGameSeed();
+    const saved = localStorage.getItem(`bingo_state_${seed}`);
+    if (saved) {
+        const state = JSON.parse(saved);
+        currentCard = state.currentCard;
+        marked = new Set(state.marked);
+        renderCard();
+    } else {
+        generateCard();
+    }
+}
+
+document.getElementById('newCardBtn').addEventListener('click', () => {
+    if (marked.size > 1 && !confirm("Deseja gerar uma nova cartela? Você perderá as marcações atuais.")) {
+        return;
+    }
+    const urlParams = new URLSearchParams(window.location.search);
+    if (!urlParams.get('jogo')) {
+        window.location.search = `?jogo=user_${Math.floor(Math.random() * 100000)}`;
+    } else {
+        generateCard();
+    }
+});
+
+document.getElementById('resetBtn').addEventListener('click', resetCard);
+
+// Inicializa carregando o jogo fixado
+loadGameState();
+
+function celebrarBingo() {
+    confetti({ particleCount: 150, spread: 80, origin: { y: 0.6 } });
+    setTimeout(() => {
+        confetti({ particleCount: 100, spread: 100, origin: { y: 0.6 } });
+    }, 300);
+}
+
+document.getElementById('bingoBtn').addEventListener('click', celebrarBingo);
     B: new Set(),
     I: new Set(),
     N: new Set(),
